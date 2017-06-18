@@ -1,0 +1,20 @@
+<h3>Top Heroes</h3>
+<div class="grid grid-pad">
+  <div *ngFor="let hero of heroes"  [routerLink]="['/detail', hero.id]"   class="col-1-4">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </div>
+</div>
+
+
+<template-ref-variable></template-ref-variable>
+
+      
+<my-sizer [(size)]="fontSizePx"></my-sizer>
+
+<my-sizer [size]="fontSizePx" (sizeChange)="fontSizePx=$event"></my-sizer>
+
+
+
+<div [style.font-size.px]="fontSizePx">Resizable Text</div>
